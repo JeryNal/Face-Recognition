@@ -2,9 +2,15 @@ import cv2
 import numpy as np
 from PIL import Image
 import os
+from flask import Flask, render_template, Response, jsonify, request, send_from_directory
 
 # Path to the data folder (where training images are stored)
 path = 'Data'  # Make sure the 'Data' folder is in the correct path relative to your script
+
+# Add this after the path definition
+if not os.path.exists(path):
+    os.makedirs(path)
+    print(f"Created directory: {path}")
 
 # Initialize the face recognizer (LBPH) and the face detector (Haar Cascade)
 recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -53,6 +59,13 @@ if len(faces) == 0:
 # Train the recognizer with the collected faces and IDs
 recognizer.train(faces, np.array(ids))
 
+# Add after training
+try:
+    recognizer.save('trainer.yml')
+    print("Model trained and saved successfully")
+except Exception as e:
+    print(f"Error saving model: {str(e)}")
+
 # Define names for recognized IDs (add more names if needed)
 names = ['None', 'jerry', 'inno']  # IDs: 1 -> 'jerry', 2 -> 'inno', etc.
 
@@ -63,6 +76,12 @@ cam = cv2.VideoCapture(0)
 if not cam.isOpened():
     print("Error: Could not open webcam.")
     exit()
+
+app = Flask(__name__, 
+    static_url_path='/static',
+    static_folder='static',
+    template_folder='templates'
+)
 
 while True:
     _, img = cam.read()  # Read a frame from the webcam

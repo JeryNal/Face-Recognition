@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Face Recognition System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{ url_for('dashboard') }}" class="navbar-brand">
+            <i class="fas fa-camera"></i> Face Recognition System
+        </a>
+        <div class="nav-links">
+            <a href="{{ url_for('logout') }}">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="face-recognition-demo">
+            <h2>Facial Recognition Technology</h2>
+            <img src="{{ url_for('static', filename='images/face_recognition_points.svg') }}" 
+                 alt="Facial Recognition Points" 
+                 class="face-points-image">
+            
+            <div class="face-recognition-features">
+                <div class="feature-item">
+                    <i class="fas fa-crosshairs"></i>
+                    <div class="feature-content">
+                        <h3>Precise Detection</h3>
+                        <p>Advanced algorithms detect and map key facial features with high accuracy</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="feature-content">
+                        <h3>Secure Authentication</h3>
+                        <p>Biometric verification ensures secure and reliable user authentication</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div class="feature-content">
+                        <h3>Real-time Processing</h3>
+                        <p>Instant face detection and matching for seamless user experience</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-user-lock"></i>
+                    <div class="feature-content">
+                        <h3>Privacy Focused</h3>
+                        <p>Your biometric data is encrypted and securely stored</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Camera Feed</h2>
+            <div class="video-container">
+                <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Camera Feed">
+            </div>
+            
+            <div class="camera-controls">
+                <button onclick="startCamera()" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Start Camera
+                </button>
+                <button onclick="stopCamera()" class="btn btn-secondary">
+                    <i class="fas fa-stop"></i> Stop Camera
+                </button>
+                <button onclick="captureImage()" class="btn btn-primary">
+                    <i class="fas fa-camera"></i> Capture
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isCameraActive = true;
+
+        function startCamera() {
+            const videoFeed = document.getElementById('video-feed');
+            videoFeed.src = "{{ url_for('video_feed') }}";
+            isCameraActive = true;
+        }
+
+        function stopCamera() {
+            if (isCameraActive) {
+                fetch("{{ url_for('stop_camera') }}")
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            const videoFeed = document.getElementById('video-feed');
+                            videoFeed.src = "{{ url_for('static', filename='images/camera-stopped.png') }}";
+                            isCameraActive = false;
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        }
+
+        function captureImage() {
+            // Add capture functionality here
+            alert('Image captured!');
+        }
+
+        // Auto-hide flash messages
+        document.addEventListener('DOMContentLoaded', function() {
+            const flashMessages = document.querySelectorAll('.flash');
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.style.opacity = '0';
+                    setTimeout(() => message.remove(), 300);
+                }, 5000);
+            });
+        });
+
+        // Clean up camera on page unload
+        window.addEventListener('beforeunload', function() {
+            if (isCameraActive) {
+                stopCamera();
+            }
+        });
+    </script>
+</body>
+</html> 

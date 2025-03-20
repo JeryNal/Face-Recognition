@@ -1,0 +1,13 @@
+your_project/
+│
+├── static/                     # Static files directory
+│   └── images/                 # Images subdirectory
+│       └── facial_recognition_interface.jpg
+│
+├── templates/                  # Templates directory
+│   └── index.html             # Your HTML template
+│
+├── app.py                     # Flask application
+├── Recognizer.py              # Face recognition code
+├── haarcascade_frontalface_default.xml
+└── requirements.txt           # Project dependencies

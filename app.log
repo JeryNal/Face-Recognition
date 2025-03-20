@@ -1,0 +1,646 @@
+2025-03-02 06:05:21,894 - root - ERROR - An error occurred
+Traceback (most recent call last):
+  File "C:\Users\MY PC\FACE\app.py", line 121, in <module>
+    init_db()
+  File "C:\Users\MY PC\FACE\database.py", line 65, in init_db
+    import models  # Ensure models are imported here
+    ^^^^^^^^^^^^^
+  File "C:\Users\MY PC\FACE\models.py", line 27, in <module>
+    class User(Base):
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\orm\decl_api.py", line 198, in __init__
+    _as_declarative(reg, cls, dict_)
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 244, in _as_declarative
+    return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 325, in setup_mapping
+    return _ClassScanMapperConfig(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 576, in __init__
+    self._setup_table(table)
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 1757, in _setup_table
+    table_cls(
+  File "<string>", line 2, in __new__
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\sql\schema.py", line 430, in __new__
+    return cls._new(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MY PC\FACE\env\Lib\site-packages\sqlalchemy\sql\schema.py", line 462, in _new
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Table 'users' is already defined for this MetaData instance.  Specify 'extend_existing=True' to redefine options and columns on an existing Table object.
+2025-03-02 06:11:13,357 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 06:11:13,357 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 06:11:13,357 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 06:11:13,357 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 06:11:14,113 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 06:11:14,113 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 06:11:14,121 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 06:11:15,457 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 06:11:15,457 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 06:11:15,457 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 06:11:15,457 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 06:11:15,499 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 06:11:15,543 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 06:11:33,998 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:11:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 06:11:34,311 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:11:34] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 06:11:34,708 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:11:34] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-02 06:11:35,226 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:11:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-02 06:12:08,120 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 06:12:08,239 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:08] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-03-02 06:12:08,326 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:08] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-02 06:12:08,339 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:08] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-02 06:12:08,675 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:08] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=YnnGueOrxx5Yzr1qavLF HTTP/1.1" 200 -
+2025-03-02 06:12:08,678 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:08] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-02 06:12:08,837 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:08] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-02 06:12:25,847 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:25] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 06:12:25,917 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:12:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:16:18,835 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:16:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 06:16:18,845 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:16:18] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 06:16:18,992 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:16:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:47:56,955 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 06:47:57,179 - debug_config - INFO - Info: Query completed, Context: {'time': 0.22417855262756348}
+2025-03-02 06:47:57,291 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 06:47:57,376 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0852048397064209}
+2025-03-02 06:47:59,618 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 06:47:59,618 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 06:47:59,618 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 06:48:01,359 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 06:48:01,422 - debug_config - INFO - Info: Query completed, Context: {'time': 0.06300473213195801}
+2025-03-02 06:48:01,422 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 06:48:01,437 - debug_config - INFO - Info: Query completed, Context: {'time': 0.015600442886352539}
+2025-03-02 06:48:01,516 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 06:48:01,799 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 06:48:56,614 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:48:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 06:48:59,411 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:48:59] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 06:49:03,881 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:49:12,138 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:12] "GET /register HTTP/1.1" 200 -
+2025-03-02 06:49:13,053 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:49:35,247 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 06:49:35,285 - debug_config - INFO - Info: Query completed, Context: {'time': 0.038031578063964844}
+2025-03-02 06:49:35,563 - debug_config - INFO - Info: Executing query, Context: {'statement': 'INSERT INTO users (name, email, face_id, image_data, password_hash, created_by, created_at, updated_at, two_factor_enabled, two_factor_secret, temp_2fa_secret) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 'parameters': ('Jerry Wafula', 'hrewdwriters@gmail.com', None, None, 'scrypt:32768:8:1$pJqPC5AOWzpyUc0D$ad65e7d60c80add4dc184d6e47a75af2fdc4ce8a25d2897f59861388e87b07b4edc63fa1c4c6545a6349af4e54356da3d868204d97157a02dc614a800c080a7a', 1, '2025-03-02 06:49:35.287464', '2025-03-02 06:49:35.287464', 0, None, None)}
+2025-03-02 06:49:35,583 - debug_config - INFO - Info: Query completed, Context: {'time': 0.019344806671142578}
+2025-03-02 06:49:35,785 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:35] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-02 06:49:35,850 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:35] "GET /login HTTP/1.1" 200 -
+2025-03-02 06:49:36,198 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:49:47,978 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 06:49:47,981 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0025119781494140625}
+2025-03-02 06:49:47,985 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:47] "POST /login HTTP/1.1" 200 -
+2025-03-02 06:49:48,047 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:49:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:50:00,616 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 06:50:00,619 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002988100051879883}
+2025-03-02 06:50:00,623 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:00] "POST /login HTTP/1.1" 200 -
+2025-03-02 06:50:00,698 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:50:17,570 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 06:50:17,604 - debug_config - INFO - Info: Query completed, Context: {'time': 0.03416895866394043}
+2025-03-02 06:50:17,607 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:17] "POST /login HTTP/1.1" 200 -
+2025-03-02 06:50:17,644 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:50:30,694 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 06:50:30,696 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002000093460083008}
+2025-03-02 06:50:30,944 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 06:50:31,132 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 06:50:31,134 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0022907257080078125}
+2025-03-02 06:50:31,144 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:31] "GET / HTTP/1.1" 200 -
+2025-03-02 06:50:31,190 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:50:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 06:51:14,795 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:51:14] "GET /video_feed HTTP/1.1" 200 -
+2025-03-02 06:53:25,220 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:53:25] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+2025-03-02 06:55:01,435 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 06:55:01] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+2025-03-02 06:58:08,771 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 06:58:11,668 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 06:58:20,571 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 06:58:20,572 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010027885437011719}
+2025-03-02 06:58:20,573 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 06:58:20,574 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0012729167938232422}
+2025-03-02 06:58:20,807 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 06:58:20,812 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 06:59:05,563 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 06:59:05,807 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 06:59:07,810 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 06:59:07,813 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0027103424072265625}
+2025-03-02 06:59:07,814 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 06:59:07,815 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010008811950683594}
+2025-03-02 06:59:07,859 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 06:59:07,864 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 06:59:31,466 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 06:59:31,718 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:05:24,806 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:05:24,806 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:05:24,806 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:05:24,806 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:05:24,859 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 07:05:24,859 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 07:05:24,866 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:05:26,151 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:05:26,151 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:05:26,151 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:05:26,151 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:05:26,211 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:05:26,211 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:05:45,498 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:05:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 07:05:45,832 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:05:45] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 07:05:46,168 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:05:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-02 07:05:52,230 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 07:05:52,263 - debug_config - INFO - Info: Query completed, Context: {'time': 0.032541513442993164}
+2025-03-02 07:05:53,451 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:05:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 07:05:53,563 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:05:53,566 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0030045509338378906}
+2025-03-02 07:05:53,577 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:05:53] "GET / HTTP/1.1" 200 -
+2025-03-02 07:05:53,717 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:05:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:06:27,403 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:06:27] "GET /video_feed HTTP/1.1" 200 -
+2025-03-02 07:06:59,534 - root - INFO - Camera successfully released
+2025-03-02 07:06:59,536 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:06:59] "GET /stop_camera HTTP/1.1" 200 -
+2025-03-02 07:08:15,121 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:08:16,269 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:08:23,731 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:08:23,734 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002858877182006836}
+2025-03-02 07:08:23,734 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:08:23,736 - debug_config - INFO - Info: Query completed, Context: {'time': 0.00258636474609375}
+2025-03-02 07:08:23,930 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:08:23,938 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:10:42,033 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\email_notifications.py', reloading
+2025-03-02 07:10:42,346 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:10:47,907 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:10:47,909 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0019927024841308594}
+2025-03-02 07:10:47,910 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:10:47,911 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010039806365966797}
+2025-03-02 07:10:47,957 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:10:47,961 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:10:59,151 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:10:59,425 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:11:01,520 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:11:01,521 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009970664978027344}
+2025-03-02 07:11:01,522 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:11:01,523 - debug_config - INFO - Info: Query completed, Context: {'time': 0.000989675521850586}
+2025-03-02 07:11:01,569 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:11:01,575 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:11:21,221 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:11:21,467 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:11:28,713 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:11:28,724 - debug_config - INFO - Info: Query completed, Context: {'time': 0.010588645935058594}
+2025-03-02 07:11:28,744 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:11:28,796 - debug_config - INFO - Info: Query completed, Context: {'time': 0.05187201499938965}
+2025-03-02 07:11:28,957 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:11:28,969 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:13:56,599 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:13:56,922 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:13:59,580 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:13:59,581 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010058879852294922}
+2025-03-02 07:13:59,583 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:13:59,583 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:13:59,625 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:13:59,632 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:14:01,907 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:14:02,113 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:14:03,564 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:14:03,564 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:14:03,564 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:14:03,572 - debug_config - INFO - Info: Query completed, Context: {'time': 0.008071184158325195}
+2025-03-02 07:14:03,622 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:14:03,628 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:14:12,283 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:14:12,483 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:14:13,957 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:14:13,957 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:14:13,957 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:14:13,957 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:14:14,005 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:14:14,007 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:15:59,252 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:15:59,252 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:15:59,252 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:15:59,252 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:15:59,333 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 07:15:59,333 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 07:15:59,333 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:16:00,741 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:16:00,742 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009906291961669922}
+2025-03-02 07:16:00,743 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:16:00,744 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009381771087646484}
+2025-03-02 07:16:00,787 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:16:00,792 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:16:08,764 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 07:16:08,915 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:08] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 07:16:09,440 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:16:13,127 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 07:16:13,204 - debug_config - INFO - Info: Query completed, Context: {'time': 0.07694888114929199}
+2025-03-02 07:16:19,611 - root - ERROR - Failed to send login notification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf0c6ed7d7sm651485466b.87 - gsmtp')
+2025-03-02 07:16:19,617 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 07:16:19,693 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:16:19,696 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0029959678649902344}
+2025-03-02 07:16:19,707 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:19] "GET / HTTP/1.1" 200 -
+2025-03-02 07:16:19,765 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:16:35,930 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:16:35] "GET /video_feed HTTP/1.1" 200 -
+2025-03-02 07:17:45,596 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:17:45,598 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0019903182983398438}
+2025-03-02 07:17:47,086 - root - ERROR - Failed to send login notification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf56691042sm288032666b.99 - gsmtp')
+2025-03-02 07:17:47,088 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:17:47] "[35m[1mPOST /api/send-login-notification HTTP/1.1[0m" 500 -
+2025-03-02 07:18:11,417 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:18:11,419 - debug_config - INFO - Info: Query completed, Context: {'time': 0.001965761184692383}
+2025-03-02 07:18:12,907 - root - ERROR - Failed to send login notification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf0c7b9ee1sm654418766b.161 - gsmtp')
+2025-03-02 07:18:12,908 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:18:12] "[35m[1mPOST /api/send-login-notification HTTP/1.1[0m" 500 -
+2025-03-02 07:18:32,935 - root - INFO - Camera successfully released
+2025-03-02 07:18:32,936 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:18:32] "GET /stop_camera HTTP/1.1" 200 -
+2025-03-02 07:19:52,540 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\email_notifications.py', reloading
+2025-03-02 07:19:52,993 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:19:55,395 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:19:55,397 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0017921924591064453}
+2025-03-02 07:19:55,398 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:19:55,399 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009982585906982422}
+2025-03-02 07:19:55,446 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:19:55,451 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:20:15,114 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:20:15,511 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:20:17,652 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:20:17,653 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010199546813964844}
+2025-03-02 07:20:17,653 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:20:17,653 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:20:17,699 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:20:17,707 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:20:32,789 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:20:33,081 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:20:35,494 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:20:35,496 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0020012855529785156}
+2025-03-02 07:20:35,497 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:20:35,498 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010128021240234375}
+2025-03-02 07:20:35,548 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:20:35,553 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:20:43,150 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:20:43,369 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:20:46,832 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:20:46,833 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010025501251220703}
+2025-03-02 07:20:46,835 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:20:46,836 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0001990795135498047}
+2025-03-02 07:20:46,873 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:20:46,878 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:20:51,467 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\email_notifications.py', reloading
+2025-03-02 07:20:51,790 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:20:54,134 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:20:54,137 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002674102783203125}
+2025-03-02 07:20:54,138 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:20:54,140 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010187625885009766}
+2025-03-02 07:20:54,198 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:20:54,201 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:23:05,278 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:23:05,485 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:23:07,095 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:23:07,111 - debug_config - INFO - Info: Query completed, Context: {'time': 0.01562976837158203}
+2025-03-02 07:23:07,111 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:23:07,111 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:23:07,154 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:23:07,154 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:23:27,780 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 07:23:28,112 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:28] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 07:23:28,498 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:23:32,004 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 07:23:32,006 - debug_config - INFO - Info: Query completed, Context: {'time': 0.00200653076171875}
+2025-03-02 07:23:34,255 - root - ERROR - Failed to send login notification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf0c6ee4c9sm663668166b.97 - gsmtp')
+2025-03-02 07:23:34,656 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 07:23:34,680 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:23:34,683 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0019991397857666016}
+2025-03-02 07:23:34,695 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:34] "GET / HTTP/1.1" 200 -
+2025-03-02 07:23:34,856 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:23:38,192 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:38] "GET /video_feed HTTP/1.1" 200 -
+2025-03-02 07:23:43,261 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:23:43,263 - debug_config - INFO - Info: Query completed, Context: {'time': 0.001995086669921875}
+2025-03-02 07:23:45,083 - root - ERROR - Failed to send registration confirmation email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf5453f468sm300039066b.51 - gsmtp')
+2025-03-02 07:23:45,085 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:45] "[35m[1mPOST /api/resend-registration-confirmation HTTP/1.1[0m" 500 -
+2025-03-02 07:23:53,480 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:23:53,485 - debug_config - INFO - Info: Query completed, Context: {'time': 0.005047321319580078}
+2025-03-02 07:23:53,487 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-02 07:23:53,499 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:53] "GET /login HTTP/1.1" 200 -
+2025-03-02 07:23:53,568 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:23:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:24:12,005 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 07:24:12,007 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002004384994506836}
+2025-03-02 07:24:12,056 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:24:12] "[35m[1mPOST /reset-password-request HTTP/1.1[0m" 500 -
+2025-03-02 07:24:12,378 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:24:12] "GET /reset-password-request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-02 07:24:12,379 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:24:12] "GET /reset-password-request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-02 07:24:12,617 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:24:12] "GET /reset-password-request?__debugger__=yes&cmd=resource&f=console.png&s=e1kzcr6sPGXS8fIyVotM HTTP/1.1" 200 -
+2025-03-02 07:24:12,617 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:24:12] "GET /reset-password-request?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-02 07:24:12,808 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:24:12] "[36mGET /reset-password-request?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-02 07:25:56,775 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\email_config.py', reloading
+2025-03-02 07:25:56,780 - root - INFO - Releasing camera on application shutdown
+2025-03-02 07:25:57,430 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:26:03,228 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:26:03,246 - debug_config - INFO - Info: Query completed, Context: {'time': 0.018031835556030273}
+2025-03-02 07:26:03,249 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:26:03,250 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0019931793212890625}
+2025-03-02 07:26:03,322 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:26:03,330 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:35:11,254 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\email_notifications.py', reloading
+2025-03-02 07:35:11,561 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:35:15,898 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:35:15,900 - debug_config - INFO - Info: Query completed, Context: {'time': 0.001993894577026367}
+2025-03-02 07:35:15,901 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:35:15,902 - debug_config - INFO - Info: Query completed, Context: {'time': 0.00099945068359375}
+2025-03-02 07:35:15,941 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:35:15,946 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:35:25,901 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\email_notifications.py', reloading
+2025-03-02 07:35:26,101 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:35:27,993 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:35:27,996 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0030198097229003906}
+2025-03-02 07:35:27,998 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:35:28,000 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0019996166229248047}
+2025-03-02 07:35:28,079 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:35:28,085 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:35:35,904 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\database.py', reloading
+2025-03-02 07:35:36,109 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:35:38,413 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:35:38,415 - debug_config - INFO - Info: Query completed, Context: {'time': 0.001997232437133789}
+2025-03-02 07:35:38,416 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:35:38,417 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009992122650146484}
+2025-03-02 07:35:38,482 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:35:38,490 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:36:14,062 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:36:14,440 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:36:16,338 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:36:16,340 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010106563568115234}
+2025-03-02 07:36:16,340 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:36:16,341 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010333061218261719}
+2025-03-02 07:36:16,378 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:36:16,383 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:37:13,775 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\init_db.py', reloading
+2025-03-02 07:37:14,108 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:37:18,765 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:37:18,769 - debug_config - INFO - Info: Query completed, Context: {'time': 0.003998756408691406}
+2025-03-02 07:37:18,771 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:37:18,772 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009999275207519531}
+2025-03-02 07:37:18,833 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:37:18,843 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:39:02,892 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:39:03,093 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:39:05,710 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:39:05,726 - debug_config - INFO - Info: Query completed, Context: {'time': 0.015623807907104492}
+2025-03-02 07:39:05,726 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:39:05,726 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:39:05,799 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:39:05,822 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:39:45,517 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:39:45,517 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:39:45,517 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:39:45,517 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:39:45,580 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 07:39:45,581 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 07:39:45,585 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:39:48,256 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:39:48,258 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0020029544830322266}
+2025-03-02 07:39:48,260 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:39:48,261 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0012981891632080078}
+2025-03-02 07:39:48,298 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:39:48,305 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:40:29,673 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:40:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 07:40:29,953 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:40:29] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 07:40:30,584 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:40:30] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-02 07:40:40,645 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:40:40] "GET /register HTTP/1.1" 200 -
+2025-03-02 07:40:40,691 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:40:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:41:27,329 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('mgkfreewizard@gmail.com', 1, 0)}
+2025-03-02 07:41:27,400 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:41:27] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2025-03-02 07:41:27,449 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:41:27] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-02 07:41:27,452 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:41:27] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-02 07:41:28,110 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:41:28] "GET /register?__debugger__=yes&cmd=resource&f=console.png&s=KMVrU0rBoeO7Ol1fDzlT HTTP/1.1" 200 -
+2025-03-02 07:41:28,122 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:41:28] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-02 07:41:28,152 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:41:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-02 07:42:30,075 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:42:30] "GET /login HTTP/1.1" 200 -
+2025-03-02 07:42:30,157 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:42:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:42:36,573 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:42:36] "GET /login HTTP/1.1" 200 -
+2025-03-02 07:42:36,630 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:42:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:47:40,845 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:47:40,846 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0012438297271728516}
+2025-03-02 07:47:40,847 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:47:40,848 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:47:40,897 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 07:47:40,897 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 07:47:40,911 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 07:47:42,436 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 07:47:42,437 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009119510650634766}
+2025-03-02 07:47:42,438 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 07:47:42,439 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009162425994873047}
+2025-03-02 07:47:42,479 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 07:47:42,515 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 07:48:54,372 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:48:54] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 07:48:54,450 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:48:54] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 07:48:59,426 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:48:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:49:04,115 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:49:04] "GET /register HTTP/1.1" 200 -
+2025-03-02 07:49:04,259 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:49:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:49:27,075 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 07:49:27,133 - debug_config - INFO - Info: Query completed, Context: {'time': 0.05783557891845703}
+2025-03-02 07:49:27,377 - debug_config - INFO - Info: Executing query, Context: {'statement': 'INSERT INTO users (name, email, face_id, image_data, password_hash, created_by, created_at, updated_at, two_factor_enabled, two_factor_secret, temp_2fa_secret, is_active, otp, otp_created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 'parameters': ('Gerald Wamalwa', 'wamalwagerald98@gmail.com', None, None, 'scrypt:32768:8:1$me8jPmENqUnwabIL$00cd581e799831080ef5e95939e54165c638919b1e622667ad5fad900171722e25186fb313c270efad9c0082052a6e75acb85033f42407716e914a57b9302bb8', 1, '2025-03-02 07:49:27.134664', '2025-03-02 07:49:27.134664', 0, None, None, 0, '224741', '2025-03-02 15:49:27.373711')}
+2025-03-02 07:49:27,409 - debug_config - INFO - Info: Query completed, Context: {'time': 0.032274723052978516}
+2025-03-02 07:49:34,745 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf0c7ba168sm654622366b.163 - gsmtp')
+2025-03-02 07:49:34,747 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:49:34] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-02 07:49:34,936 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:49:34] "GET /verify-email?email=wamalwagerald98@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:49:35,359 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:49:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:50:55,441 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 07:50:55,444 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002997875213623047}
+2025-03-02 07:50:55,450 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-02 15:50:55.450519', '303522', '2025-03-02 15:50:55.446142', 2)}
+2025-03-02 07:50:55,459 - debug_config - INFO - Info: Query completed, Context: {'time': 0.008977174758911133}
+2025-03-02 07:50:55,754 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:50:55,755 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0012547969818115234}
+2025-03-02 07:50:57,606 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf0c6f5363sm654990066b.123 - gsmtp')
+2025-03-02 07:50:57,608 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:50:57] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-02 07:50:57,621 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:50:57] "GET /verify-email?email=wamalwagerald98@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:50:57,676 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:50:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:51:36,744 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 07:51:36,749 - debug_config - INFO - Info: Query completed, Context: {'time': 0.005004167556762695}
+2025-03-02 07:51:36,752 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-02 15:51:36.751038', '462852', '2025-03-02 15:51:36.750036', 2)}
+2025-03-02 07:51:36,897 - debug_config - INFO - Info: Query completed, Context: {'time': 0.14607882499694824}
+2025-03-02 07:51:38,066 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:51:38,066 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-02 07:51:39,898 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf0c7bb85asm656099066b.162 - gsmtp')
+2025-03-02 07:51:39,900 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:51:39] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-02 07:51:39,915 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:51:39] "GET /verify-email?email=wamalwagerald98@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:51:39,957 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:51:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:52:24,955 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 07:52:24,960 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0050048828125}
+2025-03-02 07:52:24,964 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:52:24] "POST /verify-email?email=wamalwagerald98@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:52:25,033 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:52:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:52:29,099 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('wamalwagerald98@gmail.com', 1, 0)}
+2025-03-02 07:52:29,102 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0030057430267333984}
+2025-03-02 07:52:29,103 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-02 15:52:29.103739', '088737', '2025-03-02 15:52:29.103739', 2)}
+2025-03-02 07:52:29,107 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0039997100830078125}
+2025-03-02 07:52:29,322 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (2,)}
+2025-03-02 07:52:29,324 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0019996166229248047}
+2025-03-02 07:52:31,506 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf51e09377sm311937166b.117 - gsmtp')
+2025-03-02 07:52:31,508 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:52:31] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-02 07:52:31,518 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:52:31] "GET /verify-email?email=wamalwagerald98@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:52:31,672 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:52:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:53:26,860 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:53:26] "GET /login HTTP/1.1" 200 -
+2025-03-02 07:53:26,959 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:53:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:53:29,377 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:53:29] "GET /register HTTP/1.1" 200 -
+2025-03-02 07:53:29,456 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:53:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:54:09,743 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('mgkfreewizard@gmail.com', 1, 0)}
+2025-03-02 07:54:09,747 - debug_config - INFO - Info: Query completed, Context: {'time': 0.004002094268798828}
+2025-03-02 07:54:09,997 - debug_config - INFO - Info: Executing query, Context: {'statement': 'INSERT INTO users (name, email, face_id, image_data, password_hash, created_by, created_at, updated_at, two_factor_enabled, two_factor_secret, temp_2fa_secret, is_active, otp, otp_created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 'parameters': ('James Isaac', 'mgkfreewizard@gmail.com', None, None, 'scrypt:32768:8:1$ZDid2rEXt7VmrQ7y$58dc8dc8f677d7a13ff69541de73623f6763628c967e5372187c2cb46adf66d05b08ad12042f02a7629d0518edcc1dc75054a5c82e3e4bc20d668f4b5815019a', 1, '2025-03-02 07:54:09.748752', '2025-03-02 07:54:09.748752', 0, None, None, 0, '190659', '2025-03-02 15:54:09.996877')}
+2025-03-02 07:54:10,000 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0039975643157958984}
+2025-03-02 07:54:12,097 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf1625cbe7sm625466766b.128 - gsmtp')
+2025-03-02 07:54:12,103 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:54:12] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-02 07:54:12,137 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:54:12] "GET /verify-email?email=mgkfreewizard@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:54:12,191 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:54:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:54:33,768 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('mgkfreewizard@gmail.com', 1, 0)}
+2025-03-02 07:54:33,780 - debug_config - INFO - Info: Query completed, Context: {'time': 0.012008428573608398}
+2025-03-02 07:54:33,783 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-02 15:54:33.783791', '371468', '2025-03-02 15:54:33.781792', 3)}
+2025-03-02 07:54:33,790 - debug_config - INFO - Info: Query completed, Context: {'time': 0.007001161575317383}
+2025-03-02 07:54:33,900 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (3,)}
+2025-03-02 07:54:33,902 - debug_config - INFO - Info: Query completed, Context: {'time': 0.001997709274291992}
+2025-03-02 07:54:35,746 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-5e4c3fb44dasm5636229a12.62 - gsmtp')
+2025-03-02 07:54:35,748 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:54:35] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-02 07:54:35,758 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:54:35] "GET /verify-email?email=mgkfreewizard@gmail.com HTTP/1.1" 200 -
+2025-03-02 07:54:35,813 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 07:54:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 07:57:02,663 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 07:57:08,561 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:11:54,711 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 12:11:54,882 - debug_config - INFO - Info: Query completed, Context: {'time': 0.1715402603149414}
+2025-03-02 12:11:54,883 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 12:11:54,884 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010027885437011719}
+2025-03-02 12:12:04,562 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 12:12:04,787 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 12:12:04,938 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:12:18,824 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 12:12:18,877 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0532381534576416}
+2025-03-02 12:12:18,922 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 12:12:18,924 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0020127296447753906}
+2025-03-02 12:12:18,980 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 12:12:19,478 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 12:12:27,951 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:12:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 12:12:28,279 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:12:28] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-02 12:12:30,656 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:12:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 12:12:33,797 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-02 12:12:39,844 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:12:43,290 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-02 12:12:43,291 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010006427764892578}
+2025-03-02 12:12:43,292 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-02 12:12:43,293 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009975433349609375}
+2025-03-02 12:12:43,337 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 12:12:43,341 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-02 12:12:46,965 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 12:12:48,128 - debug_config - INFO - Info: Query completed, Context: {'time': 1.1659235954284668}
+2025-03-02 12:12:48,159 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:12:48] "POST /login HTTP/1.1" 200 -
+2025-03-02 12:12:49,324 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:12:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 12:13:11,637 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 12:13:11,639 - debug_config - INFO - Info: Query completed, Context: {'time': 0.002016305923461914}
+2025-03-02 12:13:11,642 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:13:11] "POST /login HTTP/1.1" 200 -
+2025-03-02 12:13:12,106 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:13:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 12:13:30,606 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 12:13:30,697 - debug_config - INFO - Info: Query completed, Context: {'time': 0.09168696403503418}
+2025-03-02 12:13:30,699 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:13:30] "POST /login HTTP/1.1" 200 -
+2025-03-02 12:13:30,774 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:13:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 12:13:39,195 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:13:39] "GET /register HTTP/1.1" 200 -
+2025-03-02 12:13:39,257 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:13:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 12:14:00,227 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 12:14:00,239 - debug_config - INFO - Info: Query completed, Context: {'time': 0.011990070343017578}
+2025-03-02 12:14:00,828 - debug_config - INFO - Info: Executing query, Context: {'statement': 'INSERT INTO users (name, email, face_id, image_data, password_hash, created_by, created_at, updated_at, two_factor_enabled, two_factor_secret, temp_2fa_secret, is_active, otp, otp_created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 'parameters': ('Hreq jerry', 'hrewdwriters@gmail.com', None, None, 'scrypt:32768:8:1$YK9rQv45GzYyk5yr$d65f6e3aa89563947abc5e87bde2e6c05baa0c2fcd5c052cf7a61d8455b8c54822d46f1a5472885bfbc986060a5d99309e870acc2e8d06867956b02e8f11e1bd', 1, '2025-03-02 12:14:00.240830', '2025-03-02 12:14:00.240830', 0, None, None, 0, '795962', '2025-03-02 20:14:00.823443')}
+2025-03-02 12:14:00,879 - debug_config - INFO - Info: Query completed, Context: {'time': 0.05058407783508301}
+2025-03-02 12:14:07,360 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf58804b49sm301654966b.26 - gsmtp')
+2025-03-02 12:14:07,362 - root - WARNING - DEVELOPMENT MODE: OTP for hrewdwriters@gmail.com is 795962
+2025-03-02 12:14:07,364 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:14:07] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-02 12:14:07,547 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:14:07] "GET /verify-email?email=hrewdwriters@gmail.com HTTP/1.1" 200 -
+2025-03-02 12:14:08,230 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:14:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 12:14:30,727 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-02 12:14:30,730 - debug_config - INFO - Info: Query completed, Context: {'time': 0.003012418746948242}
+2025-03-02 12:14:30,738 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-02 20:14:30.737978', '019446', '2025-03-02 20:14:30.732973', 4)}
+2025-03-02 12:14:30,846 - debug_config - INFO - Info: Query completed, Context: {'time': 0.1075747013092041}
+2025-03-02 12:14:31,100 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (4,)}
+2025-03-02 12:14:31,157 - debug_config - INFO - Info: Query completed, Context: {'time': 0.05716967582702637}
+2025-03-02 12:14:33,051 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-5e4c3b6d702sm5797558a12.17 - gsmtp')
+2025-03-02 12:14:33,052 - root - WARNING - DEVELOPMENT MODE: New OTP for hrewdwriters@gmail.com is 019446
+2025-03-02 12:14:33,053 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:14:33] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-02 12:14:33,061 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:14:33] "GET /verify-email?email=hrewdwriters@gmail.com HTTP/1.1" 200 -
+2025-03-02 12:14:33,126 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:14:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 23:02:42,947 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 23:02:42] "GET /verify-email?email=hrewdwriters@gmail.com HTTP/1.1" 200 -
+2025-03-03 16:10:40,924 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-03 16:10:40,940 - debug_config - INFO - Info: Query completed, Context: {'time': 0.01596522331237793}
+2025-03-03 16:10:40,940 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-03 16:10:40,940 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-03 16:10:41,696 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 16:10:41,696 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 16:10:41,717 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 16:10:44,036 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-03 16:10:44,036 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-03 16:10:44,052 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-03 16:10:44,052 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-03 16:10:44,083 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 16:10:44,161 - werkzeug - INFO -  * Debugger PIN: 644-347-299
+2025-03-03 16:11:01,308 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 16:11:02,267 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:02] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-03 16:11:10,209 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:10] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 16:11:13,185 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-03 16:11:28,661 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-03 16:11:28,772 - debug_config - INFO - Info: Query completed, Context: {'time': 0.11102771759033203}
+2025-03-03 16:11:29,257 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-03 16:11:29,312 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:29] "GET /verify-email?email=hrewdwriters@gmail.com HTTP/1.1" 200 -
+2025-03-03 16:11:29,392 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:11:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:11:57,663 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-03 16:11:57,671 - debug_config - INFO - Info: Query completed, Context: {'time': 0.008004426956176758}
+2025-03-03 16:11:57,681 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-04 00:11:57.681893', '318562', '2025-03-04 00:11:57.676738', 4)}
+2025-03-03 16:11:57,751 - debug_config - INFO - Info: Query completed, Context: {'time': 0.06959676742553711}
+2025-03-03 16:11:58,349 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (4,)}
+2025-03-03 16:11:58,351 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0029909610748291016}
+2025-03-03 16:12:02,472 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-390e47a6a78sm15620651f8f.23 - gsmtp')
+2025-03-03 16:12:02,473 - root - WARNING - DEVELOPMENT MODE: New OTP for hrewdwriters@gmail.com is 318562
+2025-03-03 16:12:02,475 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:02] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-03 16:12:02,484 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:02] "GET /verify-email?email=hrewdwriters@gmail.com HTTP/1.1" 200 -
+2025-03-03 16:12:02,549 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:12:12,898 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-03 16:12:12,901 - debug_config - INFO - Info: Query completed, Context: {'time': 0.004747629165649414}
+2025-03-03 16:12:12,904 - debug_config - INFO - Info: Executing query, Context: {'statement': 'UPDATE users SET updated_at=?, otp=?, otp_created_at=? WHERE users.id = ?', 'parameters': ('2025-03-04 00:12:12.903909', '120488', '2025-03-04 00:12:12.902910', 4)}
+2025-03-03 16:12:12,931 - debug_config - INFO - Info: Query completed, Context: {'time': 0.027639389038085938}
+2025-03-03 16:12:13,025 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.id = ?', 'parameters': (4,)}
+2025-03-03 16:12:13,029 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0032188892364501953}
+2025-03-03 16:12:16,449 - root - ERROR - Failed to send OTP verification email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-43bcb61139esm7434645e9.12 - gsmtp')
+2025-03-03 16:12:16,450 - root - WARNING - DEVELOPMENT MODE: New OTP for hrewdwriters@gmail.com is 120488
+2025-03-03 16:12:16,452 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:16] "[32mPOST /resend-otp HTTP/1.1[0m" 302 -
+2025-03-03 16:12:16,511 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:16] "GET /verify-email?email=hrewdwriters@gmail.com HTTP/1.1" 200 -
+2025-03-03 16:12:16,549 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:12:31,498 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:31] "GET /login HTTP/1.1" 200 -
+2025-03-03 16:12:31,568 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:12:38,709 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:38] "GET /register HTTP/1.1" 200 -
+2025-03-03 16:12:38,751 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:12:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:13:13,396 - debug_config - INFO - Info: Executing query, Context: {'statement': 'SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.face_id AS users_face_id, users.image_data AS users_image_data, users.password_hash AS users_password_hash, users.created_by AS users_created_by, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.two_factor_enabled AS users_two_factor_enabled, users.two_factor_secret AS users_two_factor_secret, users.temp_2fa_secret AS users_temp_2fa_secret, users.is_active AS users_is_active, users.otp AS users_otp, users.otp_created_at AS users_otp_created_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?', 'parameters': ('hrewdwriters@gmail.com', 1, 0)}
+2025-03-03 16:13:13,403 - debug_config - INFO - Info: Query completed, Context: {'time': 0.007170677185058594}
+2025-03-03 16:13:13,436 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:13:13] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-03 16:13:13,459 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:13:13] "GET /register HTTP/1.1" 200 -
+2025-03-03 16:13:13,506 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:13:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:20:10,428 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:10] "GET /register HTTP/1.1" 200 -
+2025-03-03 16:20:10,504 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:10] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 16:20:17,044 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:17] "GET /register HTTP/1.1" 200 -
+2025-03-03 16:20:17,106 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:20:33,119 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 16:20:33,149 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:33] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-03 16:20:33,223 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 16:20:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 06:15:47,509 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-08 06:15:47,533 - debug_config - INFO - Info: Query completed, Context: {'time': 0.025107622146606445}
+2025-03-08 06:15:47,534 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-08 06:15:47,535 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0010051727294921875}
+2025-03-08 06:15:48,699 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 06:15:48,699 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 06:15:48,703 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 06:15:50,430 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-08 06:15:50,432 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0009913444519042969}
+2025-03-08 06:15:50,432 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-08 06:15:50,432 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-08 06:15:50,479 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 06:15:50,536 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 06:16:01,177 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-08 06:16:01,178 - debug_config - INFO - Info: Query completed, Context: {'time': 0.001371622085571289}
+2025-03-08 06:16:01,179 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-08 06:16:01,179 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-08 06:16:01,249 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 06:16:01,250 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 06:16:01,254 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 06:16:03,032 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("users")', 'parameters': ()}
+2025-03-08 06:16:03,032 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0}
+2025-03-08 06:16:03,038 - debug_config - INFO - Info: Executing query, Context: {'statement': 'PRAGMA main.table_info("face_encodings")', 'parameters': ()}
+2025-03-08 06:16:03,038 - debug_config - INFO - Info: Query completed, Context: {'time': 0.0005106925964355469}
+2025-03-08 06:16:03,067 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 06:16:03,080 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 06:41:26,559 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\Recognizer.py', reloading
+2025-03-08 06:41:26,815 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\Recognizer.py', reloading

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - Face Recognition System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h1>Verify Your Email</h1>
+            <p>Enter the verification code sent to your email</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="card">
+            <div class="verification-message">
+                <i class="fas fa-envelope-open-text" style="font-size: 48px; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                <p>We've sent a verification code to:</p>
+                <p style="font-weight: 600; color: var(--primary-color);">{{ email }}</p>
+            </div>
+
+            <form method="POST" action="{{ url_for('verify_email', email=email) }}" id="verificationForm">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <div class="form-group">
+                    <label for="otp" class="form-label">Verification Code</label>
+                    <input type="text" 
+                           id="otp" 
+                           name="otp" 
+                           class="form-control otp-input" 
+                           required 
+                           maxlength="6"
+                           pattern="\d{6}"
+                           placeholder="Enter 6-digit code"
+                           autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-check-circle"></i> Verify Email
+                    </button>
+                </div>
+            </form>
+
+            <div class="resend-section">
+                <p>Didn't receive the code?</p>
+                <form method="POST" action="{{ url_for('resend_otp') }}" id="resendForm">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="email" value="{{ email }}">
+                    <button type="submit" class="btn btn-secondary" id="resendButton">
+                        <i class="fas fa-paper-plane"></i> Resend Code
+                    </button>
+                </form>
+                <div id="countdown" style="display: none; margin-top: 10px; color: var(--light-text);"></div>
+            </div>
+        </div>
+
+        <div class="auth-links">
+            <a href="{{ url_for('login') }}">
+                <i class="fas fa-arrow-left"></i> Back to Login
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Auto-focus OTP input
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('otp').focus();
+        });
+
+        // OTP input formatting and validation
+        document.getElementById('otp').addEventListener('input', function(e) {
+            // Remove non-digits
+            this.value = this.value.replace(/\D/g, '');
+            
+            // Limit to 6 digits
+            if (this.value.length > 6) {
+                this.value = this.value.slice(0, 6);
+            }
+        });
+
+        // Resend cooldown timer
+        let cooldownTime = 60; // 60 seconds cooldown
+        let cooldownActive = false;
+
+        function startCooldown() {
+            const countdownDiv = document.getElementById('countdown');
+            const resendButton = document.getElementById('resendButton');
+            let timeLeft = cooldownTime;
+
+            cooldownActive = true;
+            resendButton.disabled = true;
+            countdownDiv.style.display = 'block';
+
+            const timer = setInterval(() => {
+                timeLeft--;
+                countdownDiv.textContent = `Resend available in ${timeLeft} seconds`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    cooldownActive = false;
+                    resendButton.disabled = false;
+                    countdownDiv.style.display = 'none';
+                }
+            }, 1000);
+        }
+
+        // Handle resend form submission
+        document.getElementById('resendForm').addEventListener('submit', function(e) {
+            if (cooldownActive) {
+                e.preventDefault();
+                return;
+            }
+            startCooldown();
+        });
+
+        // Auto-hide flash messages
+        document.addEventListener('DOMContentLoaded', function() {
+            const flashMessages = document.querySelectorAll('.flash');
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.style.opacity = '0';
+                    setTimeout(() => message.remove(), 300);
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

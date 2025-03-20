@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .point { fill: #4a90e2; }
+        .line { stroke: #4a90e2; stroke-width: 2; }
+        .label { font-family: Arial; font-size: 12px; fill: #2c3e50; }
+    </style>
+    
+    <!-- Face outline -->
+    <path d="M200,50 C300,30 500,30 600,50 C650,150 650,250 600,350 C500,370 300,370 200,350 C150,250 150,150 200,50" 
+          fill="none" stroke="#2c3e50" stroke-width="2"/>
+    
+    <!-- Facial points -->
+    <g id="facial-points">
+        <!-- Eyes -->
+        <circle class="point" cx="300" cy="150" r="4"/>
+        <circle class="point" cx="500" cy="150" r="4"/>
+        
+        <!-- Nose -->
+        <circle class="point" cx="400" cy="200" r="4"/>
+        
+        <!-- Mouth -->
+        <circle class="point" cx="350" cy="280" r="4"/>
+        <circle class="point" cx="450" cy="280" r="4"/>
+        
+        <!-- Jaw -->
+        <circle class="point" cx="250" cy="320" r="4"/>
+        <circle class="point" cx="550" cy="320" r="4"/>
+        
+        <!-- Eyebrows -->
+        <circle class="point" cx="280" cy="120" r="4"/>
+        <circle class="point" cx="520" cy="120" r="4"/>
+    </g>
+    
+    <!-- Labels -->
+    <g id="labels">
+        <text class="label" x="290" y="140">Eye Point</text>
+        <text class="label" x="390" y="190">Nose Point</text>
+        <text class="label" x="340" y="270">Mouth Points</text>
+        <text class="label" x="240" y="310">Jaw Points</text>
+        <text class="label" x="270" y="110">Eyebrow Points</text>
+    </g>
+    
+    <!-- Connecting lines -->
+    <g id="lines">
+        <line class="line" x1="300" y1="150" x2="500" y2="150"/>
+        <line class="line" x1="350" y1="280" x2="450" y2="280"/>
+        <line class="line" x1="250" y1="320" x2="550" y2="320"/>
+    </g>
+</svg> 

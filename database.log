@@ -1,0 +1,514 @@
+2025-03-08 06:55:04,702 - database - INFO - Database initialized successfully
+2025-03-08 07:00:01,977 - database - INFO - Database initialized successfully
+2025-03-08 07:00:11,707 - __main__ - INFO - Created test user
+2025-03-08 07:00:12,206 - __main__ - INFO - Testing face encoding storage...
+2025-03-08 07:00:12,419 - Recognizer - INFO - Face data saved for user 1
+2025-03-08 07:00:12,419 - __main__ - INFO - Testing face verification...
+2025-03-08 07:00:12,655 - __main__ - INFO - Face verification result: Match=False, Confidence=0
+2025-03-08 07:00:12,662 - __main__ - INFO - Found 1 security audit entries
+2025-03-08 07:00:12,662 - __main__ - INFO - Testing failed verification handling...
+2025-03-08 07:00:14,650 - __main__ - INFO - Failed attempt result: Match=False, Confidence=0
+2025-03-08 07:00:14,680 - database - WARNING - Face encoding 1 deactivated due to multiple failed verifications
+2025-03-08 07:00:15,396 - __main__ - INFO - Failed attempt result: Match=False, Confidence=0
+2025-03-08 07:00:15,399 - Recognizer - WARNING - No stored encodings found for user 1
+2025-03-08 07:00:15,399 - __main__ - INFO - Failed attempt result: Match=False, Confidence=0
+2025-03-08 07:00:15,687 - __main__ - INFO - Face encoding active status: False
+2025-03-08 07:00:15,687 - __main__ - INFO - Testing data integrity...
+2025-03-08 07:00:15,690 - __main__ - INFO - Hash verification: True
+2025-03-08 07:00:16,522 - __main__ - INFO - Test cleanup completed
+2025-03-08 07:06:21,784 - database - INFO - Database initialized successfully
+2025-03-08 07:08:28,244 - database - INFO - Database initialized successfully
+2025-03-08 07:08:34,787 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:08:34,787 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:08:34,856 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:08:38,184 - database - INFO - Database initialized successfully
+2025-03-08 07:08:38,221 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:08:39,111 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:08:39,821 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:08:39] "[32mGET /?vscodeBrowserReqId=1741446517324 HTTP/1.1[0m" 302 -
+2025-03-08 07:08:41,344 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:08:41] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 07:08:58,743 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:08:58] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-08 07:08:58,757 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:08:58] "GET /login?next=/?vscodeBrowserReqId%3D1741446517324 HTTP/1.1" 200 -
+2025-03-08 07:09:01,304 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:09:01] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-08 07:09:01,508 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:09:01] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-08 07:09:26,605 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:09:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-08 07:15:22,703 - database - INFO - Database initialized successfully
+2025-03-08 07:15:24,760 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:15:24,761 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:15:24,817 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:15:27,336 - database - INFO - Database initialized successfully
+2025-03-08 07:15:27,378 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:15:27,383 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:17:13,204 - database - INFO - Database initialized successfully
+2025-03-08 07:17:33,533 - database - INFO - Database initialized successfully
+2025-03-08 07:17:33,598 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:17:33,599 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:17:33,602 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:17:36,709 - database - INFO - Database initialized successfully
+2025-03-08 07:17:36,881 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:17:36,888 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:18:47,010 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:18:47] "[32mGET /?vscodeBrowserReqId=1741447126992 HTTP/1.1[0m" 302 -
+2025-03-08 07:18:47,089 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:18:47] "GET /login?next=/?vscodeBrowserReqId%3D1741447126992 HTTP/1.1" 200 -
+2025-03-08 07:18:47,322 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:18:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:19:06,248 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:19:06] "GET /register HTTP/1.1" 200 -
+2025-03-08 07:19:07,410 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:19:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:20:01,806 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2025-03-08 07:20:01,810 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:20:01] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 07:21:11,657 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 07:21:15,270 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:21:17,959 - database - INFO - Database initialized successfully
+2025-03-08 07:21:18,013 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:21:18,045 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:22:23,991 - database - INFO - Database initialized successfully
+2025-03-08 07:22:24,333 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:22:24,333 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:22:24,338 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:22:28,895 - database - INFO - Database initialized successfully
+2025-03-08 07:22:28,943 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:22:28,949 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:23:41,052 - database - INFO - Database initialized successfully
+2025-03-08 07:23:41,123 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:23:41,123 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:23:41,129 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:23:43,791 - database - INFO - Database initialized successfully
+2025-03-08 07:23:43,829 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:23:43,836 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:24:06,242 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:24:06] "[32mGET /?vscodeBrowserReqId=1741447445885 HTTP/1.1[0m" 302 -
+2025-03-08 07:24:06,463 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:24:06] "GET /login?next=/?vscodeBrowserReqId%3D1741447445885 HTTP/1.1" 200 -
+2025-03-08 07:24:06,908 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:24:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:24:16,970 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:24:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 07:24:17,023 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:24:17] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-08 07:24:24,149 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:24:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:26:35,446 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:35] "[32mGET /?vscodeBrowserReqId=1741447595113 HTTP/1.1[0m" 302 -
+2025-03-08 07:26:35,465 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:35] "GET /login?next=/?vscodeBrowserReqId%3D1741447595113 HTTP/1.1" 200 -
+2025-03-08 07:26:35,569 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:35] "[32mGET /?vscodeBrowserReqId=1741447595536 HTTP/1.1[0m" 302 -
+2025-03-08 07:26:35,578 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:26:35,610 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:35] "GET /login?next=/?vscodeBrowserReqId%3D1741447595536 HTTP/1.1" 200 -
+2025-03-08 07:26:35,652 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:26:50,982 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:50] "[32mGET /?vscodeBrowserReqId=1741447610970 HTTP/1.1[0m" 302 -
+2025-03-08 07:26:50,990 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:50] "GET /login?next=/?vscodeBrowserReqId%3D1741447610970 HTTP/1.1" 200 -
+2025-03-08 07:26:51,017 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:26:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:27:46,209 - database - INFO - Database initialized successfully
+2025-03-08 07:27:46,839 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:27:46,839 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:27:46,860 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:27:49,074 - database - INFO - Database initialized successfully
+2025-03-08 07:27:49,114 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:27:49,120 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:27:59,244 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:27:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 07:28:02,107 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:28:02] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-08 07:28:02,487 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:28:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:28:08,944 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:28:08] "GET /register HTTP/1.1" 200 -
+2025-03-08 07:28:09,054 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:28:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:29:00,215 - root - ERROR - Registration error: __init__() got an unexpected keyword argument 'face_id'
+2025-03-08 07:29:00,216 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:29:00] "POST /register HTTP/1.1" 200 -
+2025-03-08 07:29:00,294 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:29:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:29:47,474 - root - ERROR - Registration error: __init__() got an unexpected keyword argument 'face_id'
+2025-03-08 07:29:47,476 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:29:47] "POST /register HTTP/1.1" 200 -
+2025-03-08 07:29:47,581 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:29:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:30:58,699 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\database.py', reloading
+2025-03-08 07:31:04,127 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:31:47,011 - database - ERROR - Error initializing database: MetaData.drop_all() missing 1 required positional argument: 'bind'
+2025-03-08 07:31:47,011 - root - ERROR - An error occurred
+Traceback (most recent call last):
+  File "C:\Users\MY PC\FACE\app.py", line 428, in <module>
+    init_db()
+  File "C:\Users\MY PC\FACE\database.py", line 160, in init_db
+    metadata.drop_all()
+TypeError: MetaData.drop_all() missing 1 required positional argument: 'bind'
+2025-03-08 07:32:14,052 - database - ERROR - Error initializing database: MetaData.drop_all() missing 1 required positional argument: 'bind'
+2025-03-08 07:32:14,053 - root - ERROR - An error occurred
+Traceback (most recent call last):
+  File "C:\Users\MY PC\FACE\app.py", line 428, in <module>
+    init_db()
+  File "C:\Users\MY PC\FACE\database.py", line 160, in init_db
+    metadata.drop_all()
+TypeError: MetaData.drop_all() missing 1 required positional argument: 'bind'
+2025-03-08 07:33:55,008 - database - INFO - Database initialized successfully
+2025-03-08 07:33:55,738 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:33:55,738 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:33:55,760 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:33:59,429 - database - INFO - Database initialized successfully
+2025-03-08 07:33:59,487 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:33:59,495 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:34:15,937 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:15] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 07:34:17,132 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:17] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-08 07:34:20,033 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:34:28,255 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:28] "GET /register HTTP/1.1" 200 -
+2025-03-08 07:34:28,440 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:34:52,445 - root - ERROR - Registration error: __init__() got an unexpected keyword argument 'face_id'
+2025-03-08 07:34:52,447 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:52] "POST /register HTTP/1.1" 200 -
+2025-03-08 07:34:52,724 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:34:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:43:25,943 - database - INFO - Database initialized successfully
+2025-03-08 07:43:26,566 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:43:26,566 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:43:26,611 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:43:30,131 - database - INFO - Database initialized successfully
+2025-03-08 07:43:30,178 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:43:30,195 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:43:41,251 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:43:41] "[32mGET /?vscodeBrowserReqId=1741448621178 HTTP/1.1[0m" 302 -
+2025-03-08 07:43:41,325 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:43:41] "GET /login?next=/?vscodeBrowserReqId%3D1741448621178 HTTP/1.1" 200 -
+2025-03-08 07:43:41,514 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:43:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:44:35,417 - database - INFO - Database initialized successfully
+2025-03-08 07:44:35,487 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:44:35,488 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:44:35,491 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:44:40,600 - database - INFO - Database initialized successfully
+2025-03-08 07:44:40,680 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:44:40,684 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:45:19,058 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:45:19] "[32mGET /?vscodeBrowserReqId=1741448718989 HTTP/1.1[0m" 302 -
+2025-03-08 07:45:19,079 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:45:19] "GET /login?next=/?vscodeBrowserReqId%3D1741448718989 HTTP/1.1" 200 -
+2025-03-08 07:45:19,267 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:45:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:45:22,918 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:45:22] "GET /register HTTP/1.1" 200 -
+2025-03-08 07:45:23,013 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:45:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:46:30,043 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 07:46:30,045 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:30] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 07:46:53,692 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:53] "[32mGET /?vscodeBrowserReqId=1741448813575 HTTP/1.1[0m" 302 -
+2025-03-08 07:46:53,806 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:53] "GET /login?next=/?vscodeBrowserReqId%3D1741448813575 HTTP/1.1" 200 -
+2025-03-08 07:46:53,864 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:46:54,440 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:54] "[32mGET /?vscodeBrowserReqId=1741448814419 HTTP/1.1[0m" 302 -
+2025-03-08 07:46:54,639 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:54] "GET /login?next=/?vscodeBrowserReqId%3D1741448814419 HTTP/1.1" 200 -
+2025-03-08 07:46:54,757 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:46:56,965 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:56] "GET /register HTTP/1.1" 200 -
+2025-03-08 07:46:57,139 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:46:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:47:55,555 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 07:47:55,556 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:47:55] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 07:48:48,708 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 07:48:50,194 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:48:56,768 - database - INFO - Database initialized successfully
+2025-03-08 07:48:56,848 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:48:56,856 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:50:18,531 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 07:50:18,924 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:50:27,590 - database - INFO - Database initialized successfully
+2025-03-08 07:50:27,652 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:50:27,661 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:53:38,844 - database - INFO - Database initialized successfully
+2025-03-08 07:53:39,057 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 07:53:39,057 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 07:53:39,094 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 07:53:43,366 - database - INFO - Database initialized successfully
+2025-03-08 07:53:43,452 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 07:53:43,458 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 07:54:09,323 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:09] "[32mGET /?vscodeBrowserReqId=1741449249310 HTTP/1.1[0m" 302 -
+2025-03-08 07:54:09,386 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:09] "GET /login?next=/?vscodeBrowserReqId%3D1741449249310 HTTP/1.1" 200 -
+2025-03-08 07:54:09,559 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:54:13,477 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:13] "GET /register HTTP/1.1" 200 -
+2025-03-08 07:54:13,505 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:54:47,548 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 07:54:47,566 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:47] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 07:54:47,606 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 07:54:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 07:58:20,046 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 07:58:20,396 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:00:36,220 - database - INFO - Database initialized successfully
+2025-03-08 08:00:36,312 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:00:36,313 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:00:36,316 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:00:39,358 - database - INFO - Database initialized successfully
+2025-03-08 08:00:39,399 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:00:39,403 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:01:12,702 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:01:12] "[35m[1mGET /?vscodeBrowserReqId=1741449671953 HTTP/1.1[0m" 500 -
+2025-03-08 08:01:13,057 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:01:13] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-08 08:01:19,905 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:01:19] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-08 08:01:22,019 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:01:22] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=trVCUVu1OTBhrAdwBPs3 HTTP/1.1" 200 -
+2025-03-08 08:02:00,669 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:02:01,069 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:02:05,413 - database - INFO - Database initialized successfully
+2025-03-08 08:02:05,477 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:02:05,482 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:02:38,712 - database - INFO - Database initialized successfully
+2025-03-08 08:02:38,807 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:02:38,807 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:02:38,811 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:02:41,825 - database - INFO - Database initialized successfully
+2025-03-08 08:02:41,869 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:02:41,873 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:03:18,642 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:03:19,142 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:03:27,769 - database - INFO - Database initialized successfully
+2025-03-08 08:03:27,818 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:03:27,841 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:04:51,310 - database - INFO - Database initialized successfully
+2025-03-08 08:04:51,406 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:04:51,406 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:04:51,413 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:04:54,694 - database - INFO - Database initialized successfully
+2025-03-08 08:04:54,746 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:04:54,754 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:05:40,938 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:05:40] "[35m[1mGET /?vscodeBrowserReqId=1741449940709 HTTP/1.1[0m" 500 -
+2025-03-08 08:05:41,892 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:05:41] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:05:41,909 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:05:41] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-08 08:05:43,827 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:05:43] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=2saqxJl3cWBbK0u5H7Gz HTTP/1.1" 200 -
+2025-03-08 08:06:25,923 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:06:26,412 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:06:30,743 - database - INFO - Database initialized successfully
+2025-03-08 08:06:30,805 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:06:30,813 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:08:21,540 - database - INFO - Database initialized successfully
+2025-03-08 08:08:21,599 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:08:21,599 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:08:21,604 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:08:25,135 - database - INFO - Database initialized successfully
+2025-03-08 08:08:25,198 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:08:25,204 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:08:43,062 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:08:43] "[32mGET /?vscodeBrowserReqId=1741450123026 HTTP/1.1[0m" 302 -
+2025-03-08 08:08:43,387 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:08:43] "GET /login HTTP/1.1" 200 -
+2025-03-08 08:08:43,839 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:08:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:08:48,237 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:08:48] "GET /register HTTP/1.1" 200 -
+2025-03-08 08:08:48,342 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:08:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:09:27,762 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 08:09:27,763 - root - ERROR - CSRF Error: 400 Bad Request: The CSRF session token is missing.
+2025-03-08 08:09:27,782 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:09:27] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 08:09:27,809 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:09:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:17:34,768 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:17:35,406 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:20:19,422 - database - INFO - Database initialized successfully
+2025-03-08 08:20:19,549 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:20:19,549 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:20:19,552 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:20:22,599 - database - INFO - Database initialized successfully
+2025-03-08 08:20:22,641 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:20:22,645 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:21:11,512 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:21:12,089 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:21:16,679 - database - INFO - Database initialized successfully
+2025-03-08 08:21:16,732 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:21:16,739 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:21:40,531 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:21:41,563 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:21:49,454 - database - INFO - Database initialized successfully
+2025-03-08 08:21:49,513 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:21:49,518 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:25:02,465 - database - INFO - Database initialized successfully
+2025-03-08 08:25:03,023 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:25:03,024 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:25:03,027 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:25:07,521 - database - INFO - Database initialized successfully
+2025-03-08 08:25:07,574 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:25:07,582 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:25:31,483 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:25:31] "[32mGET /?vscodeBrowserReqId=1741451131369 HTTP/1.1[0m" 302 -
+2025-03-08 08:25:31,756 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:25:31] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-03-08 08:25:32,725 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:25:32] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-08 08:25:32,741 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:25:32] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-08 08:25:32,879 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:25:32] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=pq5v0a52n2mh6EvTtRvI HTTP/1.1" 200 -
+2025-03-08 08:26:25,369 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:26:26,314 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:26:35,510 - database - INFO - Database initialized successfully
+2025-03-08 08:26:35,567 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:26:35,572 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:29:03,062 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:29:03] "[32mGET /?vscodeBrowserReqId=1741451342375 HTTP/1.1[0m" 302 -
+2025-03-08 08:29:05,494 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:29:05] "GET /login HTTP/1.1" 200 -
+2025-03-08 08:29:06,100 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:29:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:29:33,272 - database - INFO - Database initialized successfully
+2025-03-08 08:29:33,448 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:29:33,449 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:29:33,452 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:29:37,607 - database - INFO - Database initialized successfully
+2025-03-08 08:29:37,657 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:29:37,662 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:31:01,166 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:31:01] "GET /register HTTP/1.1" 200 -
+2025-03-08 08:31:01,352 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:31:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:31:38,825 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 08:31:38,825 - root - ERROR - CSRF Error: 400 Bad Request: The CSRF session token is missing.
+2025-03-08 08:31:38,833 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:31:38] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 08:31:38,857 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:31:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:37:12,960 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:37:13,803 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:48:34,339 - database - INFO - Database initialized successfully
+2025-03-08 08:48:34,470 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 08:48:34,492 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 08:48:34,495 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:48:44,292 - database - INFO - Database initialized successfully
+2025-03-08 08:48:44,584 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:48:44,693 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:52:46,757 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:52:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 08:52:48,524 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:52:48] "GET /login HTTP/1.1" 200 -
+2025-03-08 08:52:48,931 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:52:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:52:56,398 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:52:56] "GET /register HTTP/1.1" 200 -
+2025-03-08 08:52:56,604 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:52:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:53:23,542 - root - ERROR - Registration error: __init__() got an unexpected keyword argument 'is_active'
+2025-03-08 08:53:23,548 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:53:23] "POST /register HTTP/1.1" 200 -
+2025-03-08 08:53:23,666 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:53:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:53:53,703 - root - ERROR - Registration error: __init__() got an unexpected keyword argument 'is_active'
+2025-03-08 08:53:53,712 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:53:53] "POST /register HTTP/1.1" 200 -
+2025-03-08 08:53:53,842 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 08:53:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 08:55:09,413 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\database.py', reloading
+2025-03-08 08:55:11,827 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:55:22,926 - database - INFO - Database initialized successfully
+2025-03-08 08:55:23,086 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:55:23,093 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 08:55:50,695 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 08:55:50,916 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 08:55:59,816 - database - INFO - Database initialized successfully
+2025-03-08 08:55:59,878 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 08:55:59,887 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:00:53,416 - database - INFO - Database initialized successfully
+2025-03-08 09:00:53,515 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 09:00:53,516 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 09:00:53,519 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:00:56,760 - database - INFO - Database initialized successfully
+2025-03-08 09:00:56,802 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 09:00:56,807 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:02:09,747 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 09:02:10,342 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:02:20,726 - database - INFO - Database initialized successfully
+2025-03-08 09:02:20,879 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 09:02:20,888 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:05:28,547 - database - INFO - Database initialized successfully
+2025-03-08 09:05:28,649 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 09:05:28,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 09:05:28,651 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:05:35,046 - database - INFO - Database initialized successfully
+2025-03-08 09:05:35,085 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 09:05:35,090 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:05:55,261 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:05:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 09:05:55,931 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:05:55] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:05:56,336 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:05:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:06:17,234 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:06:17] "GET /register HTTP/1.1" 200 -
+2025-03-08 09:06:17,390 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:06:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:06:42,702 - root - INFO - New user created: wamalwagerald98@gmail.com
+2025-03-08 09:06:43,003 - root - INFO - OTP email sent successfully to wamalwagerald98@gmail.com
+2025-03-08 09:06:43,005 - root - INFO - Registration confirmation email sent to wamalwagerald98@gmail.com
+2025-03-08 09:06:43,009 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:06:43] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-08 09:06:43,088 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:06:43] "[32mGET /verify_email/wamalwagerald98@gmail.com HTTP/1.1[0m" 302 -
+2025-03-08 09:06:43,129 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:06:43] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:06:43,347 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:06:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:08:08,712 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 09:08:10,412 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:08:24,529 - database - INFO - Database initialized successfully
+2025-03-08 09:08:24,577 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 09:08:24,581 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:09:36,525 - database - INFO - Database initialized successfully
+2025-03-08 09:09:36,590 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 09:09:36,590 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 09:09:36,593 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:09:41,344 - database - INFO - Database initialized successfully
+2025-03-08 09:09:41,399 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 09:09:41,407 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:10:38,306 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:10:38] "[32mGET /?vscodeBrowserReqId=1741453836897 HTTP/1.1[0m" 302 -
+2025-03-08 09:10:38,918 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:10:38] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:10:53,837 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:10:53] "[32mGET /?vscodeBrowserReqId=1741453853710 HTTP/1.1[0m" 302 -
+2025-03-08 09:10:53,892 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:10:53] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:11:01,365 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:01] "[32mGET /?vscodeBrowserReqId=1741453861292 HTTP/1.1[0m" 302 -
+2025-03-08 09:11:01,391 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:01] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:11:09,583 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:09] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 09:11:09,686 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:09] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:11:10,858 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:11:20,929 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:20] "GET /register HTTP/1.1" 200 -
+2025-03-08 09:11:21,134 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:11:45,657 - root - INFO - New user created: wamalwagerald98@gmail.com
+2025-03-08 09:11:45,708 - root - INFO - OTP email sent successfully to wamalwagerald98@gmail.com
+2025-03-08 09:11:45,709 - root - ERROR - Registration error: name 'session' is not defined
+2025-03-08 09:11:45,715 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:45] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-08 09:11:45,808 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:45] "GET /register HTTP/1.1" 200 -
+2025-03-08 09:11:45,918 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:11:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:12:28,140 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:12:28] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-08 09:12:28,196 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:12:28] "GET /register HTTP/1.1" 200 -
+2025-03-08 09:12:28,453 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:12:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:12:59,596 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:12:59] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:12:59,873 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:12:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:13:11,173 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:13:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-08 09:13:13,033 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:13:13] "[32mGET /verify_email?email=wamalwagerald98@gmail.com HTTP/1.1[0m" 302 -
+2025-03-08 09:13:13,086 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:13:13] "GET /login HTTP/1.1" 200 -
+2025-03-08 09:13:13,195 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:13:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:15:18,424 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 09:15:22,431 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:58:13,529 - database - INFO - Database initialized successfully
+2025-03-08 09:58:13,637 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 09:58:13,637 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 09:58:13,644 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 09:58:16,951 - database - INFO - Database initialized successfully
+2025-03-08 09:58:17,001 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 09:58:17,006 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 09:58:49,178 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:58:49] "[32mGET /?vscodeBrowserReqId=1741456729128 HTTP/1.1[0m" 302 -
+2025-03-08 09:58:49,266 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:58:49] "GET /login?next=/?vscodeBrowserReqId%3D1741456729128 HTTP/1.1" 200 -
+2025-03-08 09:58:49,521 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:58:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:58:56,272 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:58:56] "GET /register HTTP/1.1" 200 -
+2025-03-08 09:58:56,322 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:58:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 09:59:29,969 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 09:59:29,970 - root - ERROR - CSRF Error: 400 Bad Request: The CSRF session token is missing.
+2025-03-08 09:59:30,171 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:59:30] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2025-03-08 09:59:30,821 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:59:30] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-08 09:59:30,832 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:59:30] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-08 09:59:31,275 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 09:59:31] "GET /register?__debugger__=yes&cmd=resource&f=console.png&s=FrbPl1yUgVgzdzaCkwTy HTTP/1.1" 200 -
+2025-03-08 10:00:10,471 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-08 10:00:12,330 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 10:00:29,750 - database - INFO - Database initialized successfully
+2025-03-08 10:00:29,806 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 10:00:29,815 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 10:02:12,147 - database - INFO - Database initialized successfully
+2025-03-08 10:02:12,214 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 10:02:12,214 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 10:02:12,216 - werkzeug - INFO -  * Restarting with stat
+2025-03-08 10:02:15,326 - database - INFO - Database initialized successfully
+2025-03-08 10:02:15,380 - werkzeug - WARNING -  * Debugger is active!
+2025-03-08 10:02:15,384 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-08 10:02:45,285 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:02:45] "[32mGET /?vscodeBrowserReqId=1741456965246 HTTP/1.1[0m" 302 -
+2025-03-08 10:02:45,368 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:02:45] "GET /login?next=/?vscodeBrowserReqId%3D1741456965246 HTTP/1.1" 200 -
+2025-03-08 10:02:45,554 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:02:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 10:02:48,860 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:02:48] "GET /register HTTP/1.1" 200 -
+2025-03-08 10:02:48,885 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:02:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 10:03:13,903 - flask_wtf.csrf - INFO - The CSRF session token is missing.
+2025-03-08 10:03:13,904 - root - ERROR - CSRF Error: 400 Bad Request: The CSRF session token is missing.
+2025-03-08 10:03:13,923 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:03:13] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2025-03-08 10:03:13,949 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:03:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-08 10:06:44,095 - root - ERROR - Failed to generate CSRF token: 'CSRFProtect' object has no attribute 'generate_csrf'
+2025-03-08 10:06:44,097 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:06:44] "[35m[1mGET /get_csrf_token HTTP/1.1[0m" 500 -
+2025-03-08 10:13:14,095 - root - ERROR - Failed to generate CSRF token: 'CSRFProtect' object has no attribute 'generate_csrf'
+2025-03-08 10:13:14,097 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:13:14] "[35m[1mGET /get_csrf_token HTTP/1.1[0m" 500 -
+2025-03-08 10:36:44,252 - root - ERROR - Failed to generate CSRF token: 'CSRFProtect' object has no attribute 'generate_csrf'
+2025-03-08 10:36:44,260 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:36:44] "[35m[1mGET /get_csrf_token HTTP/1.1[0m" 500 -
+2025-03-08 10:43:14,118 - root - ERROR - Failed to generate CSRF token: 'CSRFProtect' object has no attribute 'generate_csrf'
+2025-03-08 10:43:14,122 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 10:43:14] "[35m[1mGET /get_csrf_token HTTP/1.1[0m" 500 -
+2025-03-08 11:06:44,120 - root - ERROR - Failed to generate CSRF token: 'CSRFProtect' object has no attribute 'generate_csrf'
+2025-03-08 11:06:44,123 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 11:06:44] "[35m[1mGET /get_csrf_token HTTP/1.1[0m" 500 -
+2025-03-08 11:16:48,825 - werkzeug - INFO -  * Detected change in 'C:\\Users\\MY PC\\FACE\\app.py', reloading
+2025-03-12 07:49:14,389 - database - INFO - Database initialized successfully
+2025-03-12 07:49:14,954 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 07:49:14,954 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 07:49:15,022 - werkzeug - INFO -  * Restarting with stat
+2025-03-12 07:49:18,021 - database - INFO - Database initialized successfully
+2025-03-12 07:49:18,067 - werkzeug - WARNING -  * Debugger is active!
+2025-03-12 07:49:18,112 - werkzeug - INFO -  * Debugger PIN: 276-192-424
+2025-03-12 07:49:31,472 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-12 07:49:31,730 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:31] "GET /login?next=/ HTTP/1.1" 200 -
+2025-03-12 07:49:32,064 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:32] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-12 07:49:33,028 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-12 07:49:38,870 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-12 07:49:38,897 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:38] "GET /login HTTP/1.1" 200 -
+2025-03-12 07:49:38,968 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-12 07:49:42,936 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:42] "GET /register HTTP/1.1" 200 -
+2025-03-12 07:49:43,313 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-12 07:50:26,912 - root - INFO - New user created: hrewdwriters@gmail.com
+2025-03-12 07:50:29,679 - root - ERROR - Failed to send OTP email to hrewdwriters@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-3912bfdfe2bsm21128756f8f.24 - gsmtp')
+2025-03-12 07:50:29,682 - root - ERROR - Failed to send OTP email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-3912bfdfe2bsm21128756f8f.24 - gsmtp')
+2025-03-12 07:50:29,688 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:29] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-12 07:50:30,167 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:30] "[35m[1mGET /verify_email?email=hrewdwriters@gmail.com HTTP/1.1[0m" 500 -
+2025-03-12 07:50:30,405 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:30] "GET /verify_email?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-12 07:50:30,519 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:30] "GET /verify_email?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-12 07:50:30,729 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:30] "GET /verify_email?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-12 07:50:30,735 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:30] "GET /verify_email?__debugger__=yes&cmd=resource&f=console.png&s=qmAaSh9XuVm7A8ixFvL0 HTTP/1.1" 200 -
+2025-03-12 07:50:30,895 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2025 07:50:30] "[36mGET /verify_email?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

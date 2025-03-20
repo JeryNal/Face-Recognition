@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Face Recognition System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Add Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h1>Welcome Back</h1>
+            <p>Sign in to continue to your account</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}" id="loginForm">
+            <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token() }}">
+            
+            <div class="form-group">
+                <label for="email" class="form-label">
+                    <i class="fas fa-envelope"></i> Email Address
+                </label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       class="form-control" 
+                       required 
+                       autocomplete="email"
+                       placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">
+                    <i class="fas fa-lock"></i> Password
+                </label>
+                <div class="password-input-container">
+                    <input type="password" 
+                           id="password" 
+                           name="password" 
+                           class="form-control" 
+                           required
+                           autocomplete="current-password"
+                           placeholder="Enter your password">
+                    <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="remember-me">
+                    <input type="checkbox" 
+                           id="remember" 
+                           name="remember" 
+                           value="true" 
+                           checked>
+                    <label for="remember">Keep me logged in for 30 days</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-sign-in-alt"></i> Log In
+            </button>
+
+            <div class="forgot-password">
+                <a href="#" onclick="showResetPasswordForm()">
+                    <i class="fas fa-key"></i> Forgot Password?
+                </a>
+            </div>
+        </form>
+
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="{{ url_for('register') }}">Create Account</a></p>
+        </div>
+
+        <!-- Reset Password Form (Hidden by default) -->
+        <div id="resetPasswordForm" style="display: none;">
+            <form method="POST" action="{{ url_for('reset_password_request') }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" id="reset_csrf_token">
+                <div class="form-group">
+                    <label for="resetEmail" class="form-label">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" 
+                           id="resetEmail" 
+                           name="email" 
+                           class="form-control" 
+                           required
+                           placeholder="Enter your email for password reset">
+                </div>
+                <div class="form-group">
+                    <button type="submit" 
+                            class="btn btn-primary" 
+                            style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Reset Link
+                    </button>
+                </div>
+                <div class="auth-links">
+                    <a href="#" onclick="hideResetPassword()">
+                        <i class="fas fa-arrow-left"></i> Back to Login
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Refresh CSRF token periodically
+        function refreshCSRFToken() {
+            fetch('/get_csrf_token')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.csrf_token) {
+                        document.getElementById('csrf_token').value = data.csrf_token;
+                    }
+                })
+                .catch(error => console.error('Error refreshing CSRF token:', error));
+        }
+
+        // Refresh token every 30 minutes
+        setInterval(refreshCSRFToken, 30 * 60 * 1000);
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const icon = input.nextElementSibling.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Show/hide reset password form
+        function showResetPasswordForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('resetPasswordForm').style.display = 'block';
+            // Refresh CSRF token for reset form
+            fetch("{{ url_for('get_csrf_token') }}")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('reset_csrf_token').value = data.csrf_token;
+                });
+        }
+
+        function hideResetPassword() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('resetPasswordForm').style.display = 'none';
+            // Refresh CSRF token for login form
+            fetch("{{ url_for('get_csrf_token') }}")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('csrf_token').value = data.csrf_token;
+                });
+        }
+
+        // Auto-hide flash messages
+        document.addEventListener('DOMContentLoaded', function() {
+            const flashMessages = document.querySelectorAll('.flash');
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.style.opacity = '0';
+                    setTimeout(() => message.remove(), 300);
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

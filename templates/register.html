@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Face Recognition System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h1>Create Account</h1>
+            <p>Join our secure face recognition system</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('register') }}" id="registrationForm" onsubmit="return validateForm()">
+            <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token() }}">
+            <div class="form-group">
+                <label for="name" class="form-label">
+                    <i class="fas fa-user"></i> Full Name
+                </label>
+                <input type="text" 
+                       id="name" 
+                       name="name" 
+                       class="form-control" 
+                       required 
+                       minlength="2"
+                       maxlength="50"
+                       pattern="[A-Za-z\s]+"
+                       title="Please enter a valid name (letters and spaces only)"
+                       autocomplete="name"
+                       placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">
+                    <i class="fas fa-envelope"></i> Email Address
+                </label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       class="form-control" 
+                       required
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       title="Please enter a valid email address"
+                       autocomplete="email"
+                       placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">
+                    <i class="fas fa-lock"></i> Password
+                </label>
+                <div class="password-input-container">
+                    <input type="password" 
+                           id="password" 
+                           name="password" 
+                           class="form-control" 
+                           required
+                           minlength="8"
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$"
+                           title="Password must be at least 8 characters long and include letters and numbers"
+                           autocomplete="new-password"
+                           placeholder="Create a strong password">
+                    <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div id="passwordStrength" class="password-strength"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-user-plus"></i> Create Account
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Already have an account? <a href="{{ url_for('login') }}">Log In</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Refresh CSRF token periodically
+        function refreshCSRFToken() {
+            fetch('/get_csrf_token')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.csrf_token) {
+                        document.getElementById('csrf_token').value = data.csrf_token;
+                    }
+                })
+                .catch(error => console.error('Error refreshing CSRF token:', error));
+        }
+
+        // Refresh token every 30 minutes
+        setInterval(refreshCSRFToken, 30 * 60 * 1000);
+
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            // Name validation
+            if (!/^[A-Za-z\s]+$/.test(name)) {
+                alert('Please enter a valid name (letters and spaces only)');
+                return false;
+            }
+
+            // Email validation
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            // Password validation
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long');
+                return false;
+            }
+
+            if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
+                alert('Password must contain at least one letter and one number');
+                return false;
+            }
+
+            return true;
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const icon = input.nextElementSibling.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Password strength checker
+        document.getElementById('password').addEventListener('input', function(e) {
+            const password = e.target.value;
+            const strengthDiv = document.getElementById('passwordStrength');
+            let strength = 0;
+            let message = '';
+
+            // Length check
+            if (password.length >= 8) strength++;
+            // Letter check
+            if (/[A-Za-z]/.test(password)) strength++;
+            // Number check
+            if (/\d/.test(password)) strength++;
+            // Special character check
+            if (/[@$!%*#?&]/.test(password)) strength++;
+
+            switch (strength) {
+                case 0:
+                case 1:
+                    message = '<span class="weak">Weak Password</span>';
+                    break;
+                case 2:
+                    message = '<span class="medium">Medium Password</span>';
+                    break;
+                case 3:
+                    message = '<span class="strong">Strong Password</span>';
+                    break;
+                case 4:
+                    message = '<span class="very-strong">Very Strong Password</span>';
+                    break;
+            }
+
+            strengthDiv.innerHTML = message;
+        });
+    </script>
+</body>
+</html>
