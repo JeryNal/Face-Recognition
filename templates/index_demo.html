@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition System - Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        .logo { text-align: center; margin-bottom: 30px; }
+        .logo h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .logo p { color: #666; font-size: 14px; }
+        .demo-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .demo-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .feature-box {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        .feature-box strong { color: #333; display: block; margin-bottom: 5px; }
+        .feature-box p { color: #666; font-size: 13px; }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 3px solid #667eea;
+        }
+        .stat-card .number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-card .label {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover { color: black; }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .success { color: #28a745; background: #d4edda; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        .error { color: #dc3545; background: #f8d7da; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        .info { color: #0c5460; background: #d1ecf1; padding: 15px; border-radius: 5px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Face Recognition System</h1>
+            <p>Advanced Biometric Authentication</p>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ybnJ2eoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlbaWmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==" alt="Face Recognition Technology" style="width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin: 20px 0;">
+        </div>
+
+        <div class="demo-section">
+            <h3>System Overview</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number" id="user-count">2</div>
+                    <div class="label">Active Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="log-count">3</div>
+                    <div class="label">Access Logs</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h3>Key Features</h3>
+            <div class="feature-box">
+                <strong>Facial Recognition</strong>
+                <p>Detect and identify faces using advanced computer vision algorithms</p>
+            </div>
+            <div class="feature-box">
+                <strong>Multi-Factor Authentication</strong>
+                <p>Email verification + Face recognition + OTP for maximum security</p>
+            </div>
+            <div class="feature-box">
+                <strong>Audit Logging</strong>
+                <p>Comprehensive tamper-evident logs tracking all access attempts</p>
+            </div>
+            <div class="feature-box">
+                <strong>Real-Time Processing</strong>
+                <p>Process facial data in milliseconds with <2 second response time</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h3>User Credentials</h3>
+            <div class="info">
+                <strong>Primary User:</strong><br>
+                Email: demo@example.com<br>
+                Password: demo123
+            </div>
+            <div class="info">
+                <strong>Admin User:</strong><br>
+                Email: admin@example.com<br>
+                Password: admin123
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="openLoginModal()">Sign In</button>
+            <button class="btn btn-secondary" onclick="openRegisterModal()">Register</button>
+        </div>
+
+        <div class="demo-section" style="margin-top: 30px; background: #e7f3ff; border-left: 4px solid #0066cc;">
+            <h3 style="color: #0066cc;">System Status</h3>
+            <p style="color: #333; margin-bottom: 10px;">The application is fully operational with:</p>
+            <ul style="color: #666; margin-left: 20px; line-height: 1.8;">
+                <li>User authentication system (login/register)</li>
+                <li>Email verification workflow</li>
+                <li>Face registration module</li>
+                <li>Real-time audit logging</li>
+                <li>Admin dashboard with access logs</li>
+                <li>Session management</li>
+                <li>Security event tracking</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2 style="color: #333; margin-bottom: 20px;">Sign In</h2>
+            <div id="loginError"></div>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="loginEmail" required value="demo@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" id="loginPassword" required value="demo123">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2 style="color: #333; margin-bottom: 20px;">Create Account</h2>
+            <div id="registerError"></div>
+            <form onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openLoginModal() { document.getElementById("loginModal").style.display = "block"; }
+        function closeLoginModal() { document.getElementById("loginModal").style.display = "none"; }
+        function openRegisterModal() { document.getElementById("registerModal").style.display = "block"; }
+        function closeRegisterModal() { document.getElementById("registerModal").style.display = "none"; }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('loginError').innerHTML = 
+                        '<div class="success">✓ ' + data.message + '<br>Redirecting...</div>';
+                    setTimeout(() => window.location.href = '/dashboard', 1500);
+                } else {
+                    document.getElementById('loginError').innerHTML = 
+                        '<div class="error">✗ ' + data.message + '</div>';
+                }
+            })
+            .catch(e => {
+                document.getElementById('loginError').innerHTML = 
+                    '<div class="error">✗ Error: ' + e.message + '</div>';
+            });
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+            fetch('/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, password })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('registerError').innerHTML = 
+                        '<div class="success">✓ ' + data.message + '<br>Redirecting...</div>';
+                    setTimeout(() => window.location.href = data.redirect || '/verify-email', 1500);
+                } else {
+                    document.getElementById('registerError').innerHTML = 
+                        '<div class="error">✗ ' + data.message + '</div>';
+                }
+            })
+            .catch(e => {
+                document.getElementById('registerError').innerHTML = 
+                    '<div class="error">✗ Error: ' + e.message + '</div>';
+            });
+        }
+
+        window.onclick = function(event) {
+            const loginModal = document.getElementById("loginModal");
+            const registerModal = document.getElementById("registerModal");
+            if (event.target === loginModal) loginModal.style.display = "none";
+            if (event.target === registerModal) registerModal.style.display = "none";
+        }
+
+        // Load stats
+        fetch('/health')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('user-count').textContent = data.users;
+                document.getElementById('log-count').textContent = data.audit_logs;
+            })
+            .catch(e => console.log('Stats load error:', e));
+    </script>
+</body>
+</html>
